@@ -1,0 +1,91 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left,#38d39f,#38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex ($justify,$align,$direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+
+
+@import './global';
+@import './intro';
+@import './projects';
+@import './contact';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+@media screen and (max-width:1185px) {
+    html {
+        font-size: 53%;
+    }
+    .splash {
+        display: none;
+    }
+    svg {
+        width: 80%;
+    }
+    .active {
+        color: blue;
+    }
+
+}
+
+@media screen and (max-width:547px) {
+    svg {
+        height: 60%;
+        margin-top: 8rem;
+    }
+}
+
+@media screen and (max-width:515px) {
+    nav {
+        .logo {
+            @include flex(center,center,column);
+        }
+    }
+    nav h1 {
+        margin: 1rem 0;
+    }
+    nav ul {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .intro-text {
+        margin-top: 5rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    .intro-images {
+        text-align: center;
+    }
+    .main-head {
+        margin-left: 0;
+        width: 100%;
+    }
+    .intro {
+        margin-left: 0;
+        width: 100%;
+        @include flex(flex-start,center,row);
+
+    }
+
+    .form-section {
+        @include flex(flex-start,center,column);
+        form {
+            input,textarea {
+                width: 95%;
+            }
+        } 
+    } 
+
+}

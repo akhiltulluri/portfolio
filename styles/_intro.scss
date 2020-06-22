@@ -1,0 +1,94 @@
+.main-head {
+    width: 95%;
+    margin: 0 0 0 auto;
+}
+
+nav {
+    @include flex(space-around,center,row);
+    min-height: 10vh;
+    flex-wrap: wrap;
+    padding: 2rem;
+    .logo {
+        @include flex(flex-start,center,row);
+        flex: 1 1 20rem;
+    }
+    li {
+        margin: 0rem 2rem;
+    }       
+    }
+
+nav h1 {
+    margin-left: 2rem;
+}
+nav ul {
+        @include flex(flex-end,center,row);
+        flex: 1 1 40rem; 
+}
+
+.intro {
+    min-height: 90vh;
+    width: 95%;
+    margin: 0 0 0 auto;
+    flex-wrap: wrap;
+    @include flex(space-between,center,row);
+    h2 {
+        font-size: 6rem;
+        padding-top: 2rem;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
+    h3 {
+        font-size: 4rem;
+        padding: 2rem 0rem;
+    }
+    p {
+        padding-top: 2rem;
+        color: $gray-text;
+    }
+}
+
+.intro-text {
+    margin-left: 2rem;
+    flex: 1 1 10rem;
+}
+.intro-images {
+    flex: 1 1 40rem ;
+}
+
+
+
+.intro-social {
+    margin-top: 4rem;
+    a {
+        margin-right: 1rem;
+    }
+}
+
+.splash {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+.active {
+    color: rgb(255, 255, 255);
+}
+
+#clock-arrow {
+    animation: clock 1.5s infinite linear;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+@keyframes clock {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

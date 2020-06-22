@@ -1,0 +1,28 @@
+.active2 {
+    color: blue;
+}
+
+.projects {
+    width: 95%;
+    margin: 0 0 0 auto;
+    min-height: 90vh;
+    @include flex(space-between,centre,row);
+    flex-wrap: wrap;
+    text-align: center;
+    img {
+        width: 80%;
+    }
+    a {
+        display: block;
+        margin-top: 2rem;
+        color: blue;
+    }
+}
+
+.travelly,.elena {
+    flex: 1 1 40rem;
+    margin-top: 4rem;
+    img {
+        margin-top: 2rem;
+    }
+}
